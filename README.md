@@ -11,9 +11,11 @@ CRIU (stands for Checkpoint and Restore in Userspace) is a utility to checkpoint
 
 However, it is not enough just support for Linux tasks, in some case, people want to use CRIU to checkpoint/restore Android tasks. Besides, for some special cases, people want to checkpoint/restore a process tree including Linux tasks and Android tasks.
 
-## Mission and Future
+## Mission in the Future
   1. Release a criu variance for Android;
-     Build a criu variance that can be run on Android
+     Build a criu variance that can be run on Android. The biggest challengeThe is the dependency of original CRIU.
+     Certainly, we could evaluate the static version of CRIU. We give this task low priority. 
+     Because construct an Android runtime on host is possible, we could checkpoint/restore it with original CRIU.
      
   2. Make criu to support checkpoint/restore Android runtime;
      Android runtime have different libc and pthread implementation compare with generic Linux runtime
