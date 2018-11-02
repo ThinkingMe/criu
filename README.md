@@ -22,12 +22,14 @@ However, it is not enough just support for Linux tasks, in some case, people wan
 
   3. Make criu to support checkpoitn/restore configfs;
      Android use configfs for usb devices
-
-  4. Make criu to support checkpoint/restore binder device (Binder IPC);
+     
+  4. Make criu to support checkpoint/restore Android properties sharing mapping;
+       
+  5. Make criu to support checkpoint/restore binder device (Binder IPC);
      Kernel: Export binder information to /proc/<pid>/binder
      CRIU: Support binder type device and support binder ops replay
 
-  5. Upstream the feature of checkpoint/restore Android runtime to original CRIU branch.
+  6. Upstream the feature of checkpoint/restore Android runtime to original CRIU branch.
      Make criu to identify the glibc-based runtime and bionic-based runtime at runtime.
      In some case, especially for container, maybe the root process is Linux runtime, but the child is Android runtime,
      Make criu to support checkpoint/restore the process tree mixed Linux runtime (Glibc-based) and Android runtime;
